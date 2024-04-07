@@ -1347,9 +1347,10 @@
   color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important;
 }
 
+/*modifica per colore scritte nel footer*/
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #6c757d /*!important*/;
 }
 
 .text-black-50 {

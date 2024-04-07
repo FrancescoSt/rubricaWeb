@@ -19,4 +19,10 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: rgba(red, green, blue, .05);
+}
+
+.footer{
+  background-color: rgb(3, 196, 3);
+  color: white !important;
 }

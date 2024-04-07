@@ -15,17 +15,25 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        //List<string> Lista = new();
-        //List.Add("Maurizio");
-        //List.Add("Marco");
-        //List.Add("Francesco");
+        
 
-        return View( );
+        return View();
     }
 
     public IActionResult Privacy()
     {
-        return View();
+        List<Persona> Lista = new();
+        Lista.Add (new Persona{Nome="Maurizio"});
+        Lista.Add(new Persona{Nome="Marco"});
+        Lista.Add(new Persona{Nome="Francesco"});
+
+        /*
+        List<Generalità> Cognomi = new();
+        Cognomi.Add(new Generalità{Cognome="Conti"});
+        Cognomi.Add(new Generalità{Cognome="Bucci"});
+        Cognomi.Add(new Generalità{Cognome="Stoppa"});
+        */
+        return View( Lista );
     }
 
     public IActionResult Login()

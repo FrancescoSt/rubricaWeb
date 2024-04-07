@@ -1,6 +1,47 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿@model List<Persona>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    .table-bordered {
+        text-align: center;
+    }
+</style>
+
+
+
+<table class="table table-bordered" id="TabellaRegolare">
+    <tr>
+        <th>@Model[0].Nome</th>
+        <!--<th>@Model[0].</th>-->
+    </tr>
+    <tr>
+        <th>@Model[1].Nome</th>
+        <!--<th>@Model[1].</th>-->
+    </tr>
+    <tr>
+        <th>@Model[2].Nome</th>
+        <!--<th>@Model[2].</th>-->
+    </tr>
+</table>
+
+<button id="BottoneRidimensiona" onclick="Ridimensiona()">Ridimensiona la tabella</button>
+
+<script>
+//Da guardare, controllare e modificare
+function Ridimensiona(){
+         var tabella = document.getElementById(idTabella);
+    var colonne = tabella.getElementsByTagName('th');
+
+    if (colonne.length !== percentuali.length) {
+        console.error('Il numero di percentuali non corrisponde al numero di colonne');
+        return;
+    }
+
+    for (var i = 0; i < colonne.length; i++) {
+        colonne[i].style.width = percentuali[i] + '%';
+    }
+}
+
+  /*document.getElementById('BottoneRidimensiona').addEventListener('click', function() {
+   
+});*/
+</script>
